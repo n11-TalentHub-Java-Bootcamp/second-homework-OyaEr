@@ -1,10 +1,10 @@
 package com.example.secondhomeworkoyaer.dto;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 
-//Bu class bir kullanıcının yorumlarının DTO'su için yazılmıştır.
-
-public class UserCommentDetailDto {
+public class UserDto {
 
     private Long userId;
     private String userName;
@@ -12,7 +12,7 @@ public class UserCommentDetailDto {
     private String comment;
     private Date commentDate;
 
-    public UserCommentDetailDto(Long userId, String userName, String productName, String comment, Date commentDate) {
+    public UserDto(Long userId, String userName, String productName, String comment, Date commentDate) {
         this.userId = userId;
         this.userName = userName;
         this.productName = productName;
@@ -61,15 +61,5 @@ public class UserCommentDetailDto {
     }
 
 
-    @Override
-    public String toString() {
-        return "UserCommentDetailDto{" +
-                "kullanıcıId='" + userId + '\'' +
-                ", kullanıcıAdı='" + userName + '\'' +
-                ", ürünAdı='" + productName + '\'' +
-                ", yorum='" + comment + '\'' +
-                ", yorumTarihi=" + commentDate +
-                '}';
-    }
 
 }

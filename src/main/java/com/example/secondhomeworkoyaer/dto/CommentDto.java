@@ -5,7 +5,7 @@ import java.util.Date;
 
 //Bu class bir ürünün yorumlarının DTO'su için yazılmıştır.
 
-public class ProductCommentDetailDto {
+public class CommentDto {
 
     private String productName;
     private String categoryName;
@@ -17,7 +17,7 @@ public class ProductCommentDetailDto {
     private String comment;
     private Date commentDate;
 
-    public ProductCommentDetailDto(String productName, String categoryName, BigDecimal price, String userName, String userSurname, String userEmail, String userPhoneNumber, String comment, Date commentDate) {
+    public CommentDto(String productName, String categoryName, BigDecimal price, String userName, String userSurname, String userEmail, String userPhoneNumber, String comment, Date commentDate) {
         this.productName = productName;
         this.categoryName = categoryName;
         this.price = price;
