@@ -16,4 +16,7 @@ public interface CommentDao extends JpaRepository<ProductComment,Long> {
 
     @Query("select pc from ProductComment pc where pc.productId.id = :id")
     List<ProductComment> findAllByProductId(Long id);
+
+    void deleteById(Long id);
+
 }
