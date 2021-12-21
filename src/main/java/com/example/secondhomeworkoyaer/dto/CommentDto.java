@@ -7,83 +7,20 @@ import java.util.Date;
 
 public class CommentDto {
 
-    private Long id;
-    private String productName;
-    private String categoryName;
-    private BigDecimal price;
-    private String userName;
-    private String userSurname;
-    private String userEmail;
-    private String userPhoneNumber;
-    private String comment;
-    private Date commentDate;
-
-    public CommentDto(String productName, String categoryName, BigDecimal price, String userName, String userSurname, String userEmail, String userPhoneNumber, String comment, Date commentDate) {
-        this.productName = productName;
-        this.categoryName = categoryName;
-        this.price = price;
-        this.userName = userName;
-        this.userSurname = userSurname;
-        this.userEmail = userEmail;
-        this.userPhoneNumber = userPhoneNumber;
+    public CommentDto(Long id, String comment, Date commentDate, Long productId, Long userId) {
+        this.id = id;
         this.comment = comment;
         this.commentDate = commentDate;
+        this.productId = productId;
+        this.userId = userId;
     }
 
-    public String getProductName() {
-        return productName;
+    public Long getId() {
+        return id;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public String getCategoryName() {
-        return categoryName;
-    }
-
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getUserSurname() {
-        return userSurname;
-    }
-
-    public void setUserSurname(String userSurname) {
-        this.userSurname = userSurname;
-    }
-
-    public String getUserEmail() {
-        return userEmail;
-    }
-
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
-    }
-
-    public String getUserPhoneNumber() {
-        return userPhoneNumber;
-    }
-
-    public void setUserPhoneNumber(String userPhoneNumber) {
-        this.userPhoneNumber = userPhoneNumber;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getComment() {
@@ -102,19 +39,26 @@ public class CommentDto {
         this.commentDate = commentDate;
     }
 
-
-    @Override
-    public String toString() {
-        return "ProductCommentDetailDto{" +
-                "ürünAdı='" + productName + '\'' +
-                ", kategoriAdı='" + categoryName + '\'' +
-                ", fiyat=" + price +
-                ", kullanıcıAdı='" + userName + '\'' +
-                ", kullanıcı='" + userSurname + '\'' +
-                ", kullanıcıEmaili='" + userEmail + '\'' +
-                ", kullanıcıTelefon='" + userPhoneNumber + '\'' +
-                ", yorum='" + comment + '\'' +
-                ", yorumTarihi=" + commentDate +
-                '}';
+    public Long getProductId() {
+        return productId;
     }
+
+    public void setProductId(Long productId) {
+        this.productId = productId;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    private Long id;
+    private String comment;
+    private Date commentDate;
+    private Long productId;
+    private Long userId;
+
 }
