@@ -6,26 +6,52 @@ import java.util.Date;
 
 public class UserDto {
 
-    private Long userId;
+    private Long id;
+    private String name;
+    private String surname;
+    private String email;
     private String userName;
-    private String productName;
-    private String comment;
-    private Date commentDate;
+    private String phoneNumber;
 
-    public UserDto(Long userId, String userName, String productName, String comment, Date commentDate) {
-        this.userId = userId;
+    public UserDto(Long id, String name, String surname, String email, String userName, String phoneNumber) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
         this.userName = userName;
-        this.productName = productName;
-        this.comment = comment;
-        this.commentDate = commentDate;
+        this.phoneNumber = phoneNumber;
     }
 
-    public Long getUserId() {
-        return userId;
+    public Long getId() {
+        return id;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getUserName() {
@@ -36,29 +62,14 @@ public class UserDto {
         this.userName = userName;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
-
-    public Date getCommentDate() {
-        return commentDate;
-    }
-
-    public void setCommentDate(Date commentDate) {
-        this.commentDate = commentDate;
-    }
 
 
 

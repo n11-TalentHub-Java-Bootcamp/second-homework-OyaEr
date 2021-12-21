@@ -7,6 +7,7 @@ import java.util.Date;
 
 public class CommentDto {
 
+    private Long id;
     private String productName;
     private String categoryName;
     private BigDecimal price;
